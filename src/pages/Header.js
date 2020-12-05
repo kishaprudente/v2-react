@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useRouteMatch, NavLink, Link } from 'react-router-dom';
 import { FaLinkedin, FaGithubAlt, FaInstagram } from 'react-icons/fa';
 // Components
-import DemoOptions from '../../components/common/DemoOptions';
 
 const links = [
   {
