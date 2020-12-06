@@ -44,7 +44,11 @@ function Contact() {
                     </Col>
                   </Row>
                 </header>
-                <form className='form form-1 pt-15' data-netlify='true'>
+                <form
+                  className='form form-1 pt-15'
+                  method='POST'
+                  data-netlify='true'
+                >
                   <Row className='row'>
                     <Col xs={12} sm={12} md={6}>
                       <div className='form-item'>
