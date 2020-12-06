@@ -2,6 +2,14 @@ import React from 'react';
 import { Container, Hidden, Row, Col } from 'react-grid-system';
 
 function About() {
+  const recentTech = [
+    'JavaScript',
+    'Flutter',
+    'Node.js',
+    'React.js',
+    'Gatsbyjs',
+    'Angular',
+  ];
   return (
     <section className='section section-about section-about-1'>
       <div className='display-spacing'>
@@ -30,29 +38,48 @@ function About() {
                   </h3>
                   <div className='divider divider-1'></div>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim enim veniam, quis nostrud
-                    exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                    consequat.
+                    I am currently based in New York City working as a Web and
+                    Mobile Developer and Coding Tutor on the side. I am born and
+                    raised in the Philippines where I graduated with a
+                    Bachelor's degree in Software Engineering. I enjoy
+                    collaborating with individuals who loves coding as much as I
+                    do. My goal is to always build high quality software and web
+                    applications.
+                  </p>
+                  <p>
+                    I am highly self-motivated, always willing to improve and
+                    push the boundaries in any way possible. I keep myself up to
+                    date with recent technologies and concepts to solve
+                    problems.
+                  </p>
+                  <p>
+                    When I'm not coding, you can find me watching scary movies,
+                    traveling, and spending time with my husband and 2 year old
+                    daughter.
                   </p>
                 </header>
                 <Row className='pt-30'>
-                  <Col xs={12} sm={12} md={6}>
+                  <Col xs={12} sm={12} md={12}>
                     <div className='el-card-icon'>
                       <div className='el-icon'>
-                        <span className='el-icon-icon ti-ruler-pencil'></span>
+                        <span className='el-icon-icon ti-desktop'></span>
                       </div>
                       <div className='content'>
-                        <h5>Web design</h5>
-                        <p>
-                          Lorem ipsum dolor sit amet Consectetur adipisicing
-                          elit.
-                        </p>
+                        <h5>Technologies I have been working with recently:</h5>
+                        <Row>
+                          {recentTech.map((item, index) => (
+                            <Col key={index} xs={6} sm={6} md={6}>
+                              <div className='pt-30'>
+                                <span className='el-icon-icon ti-angle-double-right'></span>{' '}
+                                {item}
+                              </div>
+                            </Col>
+                          ))}
+                        </Row>
                       </div>
                     </div>
                   </Col>
-                  <Col xs={12} sm={12} md={6}>
+                  {/* <Col xs={12} sm={12} md={6}>
                     <div className='el-card-icon'>
                       <div className='el-icon'>
                         <span className='el-icon-icon ti-image'></span>
@@ -121,7 +148,7 @@ function About() {
                         </p>
                       </div>
                     </div>
-                  </Col>
+                  </Col> */}
                 </Row>
               </div>
             </Col>
