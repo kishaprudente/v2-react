@@ -2,7 +2,7 @@ import React from 'react';
 import Slider from 'react-slick';
 import { Container } from 'react-grid-system';
 
-import { useRouteMatch } from 'react-router-dom';
+// import { useRouteMatch } from 'react-router-dom';
 // Components
 import Headline from '../components/common/Headline';
 // content
