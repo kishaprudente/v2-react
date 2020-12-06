@@ -30,13 +30,13 @@ function Contact() {
                   </h3>
                   <div className='divider divider-1'></div>
                   <Row>
-                    <Col xs={3} sm={3} md={6}>
+                    <Col xs={12} sm={3} md={6}>
                       <div className='el-icon'>
                         <span className='el-icon-icon  ti-mobile'></span>
                       </div>
-                      <p>+1 (929) 536-8908</p>
+                      <p>+1(929)536-8908</p>
                     </Col>
-                    <Col xs={3} sm={3} md={6}>
+                    <Col xs={12} sm={3} md={6}>
                       <div className='el-icon'>
                         <span className='el-icon-icon  ti-email'></span>
                       </div>
