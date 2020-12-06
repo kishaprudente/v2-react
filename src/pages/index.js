@@ -1,13 +1,12 @@
 import React, { useEffect } from 'react';
 import { Route, Redirect, useRouteMatch } from 'react-router-dom';
 // Sections
-import Blog from './Blog';
+import Projects from './Projects';
 import About from './About';
 import Intro from './Intro';
 import Header from './Header';
 import Resume from './Resume';
 import Contact from './Contact';
-import Portfolio from './Portfolio';
 import Testimonial from './Testimonial';
 import BlogSinglePost from './BlogSinglePost';
 // Components
@@ -29,15 +28,11 @@ const routes = [
     component: <Resume />,
   },
   {
-    path: '/portfolio',
-    component: <Portfolio />,
+    path: '/projects',
+    component: <Projects />,
   },
   {
-    path: '/blog',
-    component: <Blog />,
-  },
-  {
-    path: '/blog/single-post',
+    path: '/projects/single-project',
     component: <BlogSinglePost />,
   },
   {

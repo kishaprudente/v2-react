@@ -17,12 +17,8 @@ const links = [
     path: '/resume',
   },
   {
-    title: 'Portfolio',
-    path: '/portfolio',
-  },
-  {
-    title: 'Blog',
-    path: '/blog',
+    title: 'Projects',
+    path: '/projects',
   },
   {
     title: 'Testimonial',
