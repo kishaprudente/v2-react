@@ -21,6 +21,13 @@ function Resume() {
           <h3>Education & Experience</h3>
           <div className='divider divider-1-reverse divider-1-1'></div>
           <div className='divider divider-1-reverse divider-1-2'></div>
+          <div className='div-center text-center lets-work'>
+            <a target='_blank' href='/assets/images/kisha/Resume.pdf'>
+              <button type='button' className='button button-md button-primary'>
+                Download my CV
+              </button>
+            </a>
+          </div>
         </header>
         <Container className='mb-spacing'>
           <Row>
