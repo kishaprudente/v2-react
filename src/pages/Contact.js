@@ -29,6 +29,20 @@ function Contact() {
                     <span>Get in touch with me today.</span>
                   </h3>
                   <div className='divider divider-1'></div>
+                  <Row>
+                    <Col xs={3} sm={3} md={6}>
+                      <div className='el-icon'>
+                        <span className='el-icon-icon  ti-mobile'></span>
+                      </div>
+                      <p>+1 (929) 536-8908</p>
+                    </Col>
+                    <Col xs={3} sm={3} md={6}>
+                      <div className='el-icon'>
+                        <span className='el-icon-icon  ti-email'></span>
+                      </div>
+                      <p>kmalozada@gmail.com</p>
+                    </Col>
+                  </Row>
                 </header>
                 <form className='form form-1 pt-15'>
                   <Row className='row'>
