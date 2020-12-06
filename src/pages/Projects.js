@@ -1,43 +1,12 @@
 import React from 'react';
 import Slider from 'react-slick';
-import { Container, Row, Col } from 'react-grid-system';
+import { Container } from 'react-grid-system';
 
-import { Link, useRouteMatch } from 'react-router-dom';
+import { useRouteMatch } from 'react-router-dom';
 // Components
 import Headline from '../components/common/Headline';
 // content
 import projects from '../content/projects';
-
-const posts = [
-  {
-    title: 'What has happened to all of the Design ideas?',
-    image: '/assets/images/blog/5-1.jpg',
-    date: 'May 15th, 2019',
-    link: '/single-project',
-    icon: 'ti-light-bulb',
-  },
-  {
-    title: 'The Best Sale Marketer Of The Next Year',
-    image: '/assets/images/blog/5-2.jpg',
-    date: 'May 18th, 2019',
-    link: '/single-project',
-    icon: 'ti-mobile',
-  },
-  {
-    title: 'What gets in the way of greate Stategy',
-    image: '/assets/images/blog/5-3.jpg',
-    date: 'May 21h, 2019',
-    link: '/single-project',
-    icon: 'ti-paint-bucket',
-  },
-  {
-    title: 'How to create great logo for your Business',
-    image: '/assets/images/blog/5-4.jpg',
-    date: 'May 21th, 2019',
-    link: '/single-project',
-    icon: 'ti-light-bulb',
-  },
-];
 
 function Blog() {
   let sliderSettings = {
