@@ -44,7 +44,7 @@ function Blog() {
     ],
   };
 
-  const { path } = useRouteMatch();
+  // const { path } = useRouteMatch();
 
   return (
     <section className='section section-blog section-blog-1'>
