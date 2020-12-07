@@ -1,7 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Hidden, Row, Col } from 'react-grid-system';
 
 function Contact() {
+  const [formValue, setFormValue] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const encode = (data) => {
+    return Object.keys(data)
+      .map(
+        (key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+      )
+      .join('&');
+  };
+
+  const handleSubmit = (e) => {
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: encode({ 'form-name': 'contact', ...formValue }),
+    })
+      .then(() => alert('Success!'))
+      .catch((error) => alert(error));
+
+    e.preventDefault();
+  };
+
+  const handleChange = (e) => setFormValue({ [e.target.name]: e.target.value });
+
+  // const [name, email, message] = formValue;
+
   return (
     <section className='section section-contact section-contact-1'>
       <div className='display-spacing'>
@@ -46,20 +76,33 @@ function Contact() {
                 </header>
                 <form
                   className='form form-1 pt-15'
-                  name='contactForm'
-                  method='POST'
+                  // name='contact'
+                  // method='POST'
                   data-netlify='true'
+                  onSubmit={handleSubmit}
                 >
                   <Row className='row'>
                     <Col xs={12} sm={12} md={6}>
                       <div className='form-item'>
-                        <input type='text' name='name' id='form-item-name' />
+                        <input
+                          type='text'
+                          name='name'
+                          id='form-item-name'
+                          value={formValue.name}
+                          onChange={handleChange}
+                        />
                         <label htmlFor='form-item-name'>Your Name</label>
                       </div>
                     </Col>
                     <Col xs={12} sm={12} md={6}>
                       <div className='form-item'>
-                        <input type='email' name='email' id='form-item-email' />
+                        <input
+                          type='email'
+                          name='email'
+                          id='form-item-email'
+                          value={formValue.email}
+                          onChange={handleChange}
+                        />
                         <label htmlFor='form-item-email'>Your Email</label>
                       </div>
                     </Col>
@@ -68,6 +111,8 @@ function Contact() {
                         <textarea
                           name='message'
                           id='form-item-message'
+                          value={formValue.message}
+                          onChange={handleChange}
                         ></textarea>
                         <label htmlFor='form-item-message'>Your Message</label>
                       </div>
