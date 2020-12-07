@@ -185,6 +185,7 @@
     .button-menu {
       top: 15px;
       right: 15px;
+      // display: none !important;
     }
 
     .header-follow {
@@ -204,6 +205,7 @@
     .button-menu {
       top: 7px;
       right: 10px;
+      // display: none !important;
     }
     .header-dots {
       right: 0 !important;
@@ -217,7 +219,16 @@
 @media (max-width: 768px) {
   .app-header {
     .header-dots,
-    .header-follow {
+    .header-follow,
+    .header-menu {
+      display: none !important;
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .app-header {
+    .button-menu {
       display: none !important;
     }
   }

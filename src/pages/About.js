@@ -39,8 +39,8 @@ function About() {
                   <div className='divider divider-1'></div>
                   <p>
                     I am currently based in New York City working as a Web and
-                    Mobile Developer and Coding Tutor on the side. I am born and
-                    raised in the Philippines where I graduated with a
+                    Mobile Developer and Coding Tutor on the side. I was born
+                    and raised in the Philippines where I graduated with a
                     Bachelor's degree in Software Engineering. I enjoy
                     collaborating with individuals who loves coding as much as I
                     do. My goal is to always build high quality software and web
