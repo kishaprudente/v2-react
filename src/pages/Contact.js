@@ -46,25 +46,37 @@ function Contact() {
                 </header>
                 <form
                   className='form form-1 pt-15'
+                  name='contactForm'
                   method='POST'
                   data-netlify='true'
                 >
                   <Row className='row'>
                     <Col xs={12} sm={12} md={6}>
                       <div className='form-item'>
-                        <input type='text' id='form-item-name' />
+                        <input
+                          type='text'
+                          name='contactName'
+                          id='form-item-name'
+                        />
                         <label htmlFor='form-item-name'>Your Name</label>
                       </div>
                     </Col>
                     <Col xs={12} sm={12} md={6}>
                       <div className='form-item'>
-                        <input type='email' id='form-item-email' />
+                        <input
+                          type='email'
+                          name='contactEmail'
+                          id='form-item-email'
+                        />
                         <label htmlFor='form-item-email'>Your Email</label>
                       </div>
                     </Col>
                     <Col xs={12} sm={12} md={12}>
                       <div className='form-item'>
-                        <textarea id='form-item-message'></textarea>
+                        <textarea
+                          name='contactMessage'
+                          id='form-item-message'
+                        ></textarea>
                         <label htmlFor='form-item-message'>Your Message</label>
                       </div>
                     </Col>
