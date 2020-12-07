@@ -57,7 +57,7 @@ function Home() {
 
   return (
     <div>
-      <Helmet title='KP | Portfolio' />
+      <Helmet title='KP | Portfolio' description='My personal website' />
       <Header />
       <Switch>
         <Route path={path} exact>
