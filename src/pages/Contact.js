@@ -69,7 +69,10 @@ function Contact() {
                       </div>
                     </Col>
                     <Col xs={12} sm={12} md={12}>
-                      <button className='button button-md button-primary'>
+                      <button
+                        type='submit'
+                        className='button button-md button-primary'
+                      >
                         Send Message
                       </button>
                     </Col>
