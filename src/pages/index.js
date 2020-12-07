@@ -57,7 +57,11 @@ function Home() {
 
   return (
     <div>
-      <Helmet title='KP | Portfolio' description='My personal website' />
+      <Helmet
+        title='KP | Portfolio'
+        description='My personal website'
+        image='web.png'
+      />
       <Header />
       <Switch>
         <Route path={path} exact>
