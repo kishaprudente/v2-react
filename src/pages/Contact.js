@@ -1,7 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Hidden, Row, Col } from 'react-grid-system';
+import NetlifyForm from 'react-ssg-netlify-forms';
 
 function Contact() {
+  const [formValues, setFormValues] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const handleChange = (e) =>
+    setFormValues({ ...formValues, [e.target.name]: e.target.value });
+
   return (
     <section className='section section-contact section-contact-1'>
       <div className='display-spacing'>
@@ -44,22 +54,37 @@ function Contact() {
                     </Col>
                   </Row>
                 </header>
-                <form
+                <NetlifyForm
                   className='form form-1 pt-15'
-                  name='contactForm'
+                  formName='contactForm'
+                  formValues={formValues}
                   method='POST'
                   data-netlify='true'
                 >
                   <Row className='row'>
                     <Col xs={12} sm={12} md={6}>
                       <div className='form-item'>
-                        <input type='text' name='name' id='form-item-name' />
+                        <input
+                          type='text'
+                          name='name'
+                          id='form-item-name'
+                          value={formValues.name}
+                          onChange={handleChange}
+                          required
+                        />
                         <label htmlFor='form-item-name'>Your Name</label>
                       </div>
                     </Col>
                     <Col xs={12} sm={12} md={6}>
                       <div className='form-item'>
-                        <input type='email' name='email' id='form-item-email' />
+                        <input
+                          type='email'
+                          name='email'
+                          id='form-item-email'
+                          value={formValues.email}
+                          onChange={handleChange}
+                          required
+                        />
                         <label htmlFor='form-item-email'>Your Email</label>
                       </div>
                     </Col>
@@ -68,6 +93,9 @@ function Contact() {
                         <textarea
                           name='message'
                           id='form-item-message'
+                          value={formValues.message}
+                          onChange={handleChange}
+                          required
                         ></textarea>
                         <label htmlFor='form-item-message'>Your Message</label>
                       </div>
@@ -81,7 +109,7 @@ function Contact() {
                       </button>
                     </Col>
                   </Row>
-                </form>
+                </NetlifyForm>
               </div>
             </Col>
           </Row>
