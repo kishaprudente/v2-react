@@ -22,7 +22,11 @@ function Resume() {
 					<div className='divider divider-1-reverse divider-1-1'></div>
 					<div className='divider divider-1-reverse divider-1-2'></div>
 					<div className='div-center text-center lets-work'>
-						<a target='_blank' href='https://www.visualcv.com/kishaprudente/'>
+						<a
+							target='_blank'
+							rel='noopener noreferrer'
+							href='https://www.visualcv.com/kishaprudente/'
+						>
 							<button type='button' className='button button-md button-primary'>
 								Download my CV
 							</button>
