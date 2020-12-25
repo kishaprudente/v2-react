@@ -48,8 +48,7 @@ function About() {
 									</p>
 									<p>
 										When I'm not coding, you can find me watching scary movies,
-										traveling, and spending time with my husband and 2 year old
-										daughter.
+										traveling, and spending time with my family.
 									</p>
 								</header>
 								<Row className='pt-30'>
